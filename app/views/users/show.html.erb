@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>User name:</strong>
+  <%= @user.name %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+<%  if  @user.id == current_user.id %>
+  <%= link_to 'Edit', edit_user_path(@user) %>
+  <%= link_to 'ぶろぐ', blogs_path %>
+<% end %>
